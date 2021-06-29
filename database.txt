@@ -1,0 +1,74 @@
+-- phpMyAdmin SQL Dump
+-- version 5.0.4
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Jun 29, 2021 at 04:31 PM
+-- Server version: 10.4.17-MariaDB
+-- PHP Version: 8.0.2
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `prajna`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `customer`
+--
+
+CREATE TABLE `customer` (
+  `accno` int(255) NOT NULL,
+  `name` varchar(300) NOT NULL,
+  `address` varchar(300) NOT NULL,
+  `acc_type` varchar(300) NOT NULL,
+  `balance` int(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `customer`
+--
+
+INSERT INTO `customer` (`accno`, `name`, `address`, `acc_type`, `balance`) VALUES
+(121, 'raj', 'india', '', 45678);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `p4`
+--
+
+CREATE TABLE `p4` (
+  `pno` int(255) NOT NULL,
+  `fname` varchar(300) NOT NULL,
+  `mname` varchar(300) NOT NULL,
+  `lname` varchar(300) NOT NULL,
+  `dob` varchar(300) NOT NULL,
+  `nationality` varchar(300) NOT NULL,
+  `address` varchar(300) NOT NULL,
+  `gender` text NOT NULL,
+  `img` blob NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `p4`
+--
+
+INSERT INTO `p4` (`pno`, `fname`, `mname`, `lname`, `dob`, `nationality`, `address`, `gender`, `img`) VALUES
+(121, 'prajna', 'v', 'kamath', '1999-09-24', 'indian', 'mulky', 'female', 0x696d616765322f6d6f64756c655f7461626c655f626f74746f6d2e706e67),
+(121, 'prajna', 'v', 'kamath', '1999-09-24', 'indian', 'mulky', 'female', 0x696d616765322f696d616765732e706e67);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
